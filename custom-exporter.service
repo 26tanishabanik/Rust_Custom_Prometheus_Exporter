@@ -1,0 +1,13 @@
+[Unit]
+Description=Streams the folder metrics, folder file count and disk usage
+After=network.target
+
+
+[Service]
+Type=simple
+ExecStart=/home/tanisha/Desktop/Projects/custom_exporter/target/debug/custom_exporter
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
